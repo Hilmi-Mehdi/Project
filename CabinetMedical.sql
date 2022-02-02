@@ -18,6 +18,14 @@ insert into Patient values
 ('Hilmi','Mehdi','6/30/2000','H','0631417887','Quartier Inara Marrakech',1231),
 ('Hammoucha','Mohamed','3/20/2001','H','0631453287','Abwab Marrakech Marrakech',2131)
 
+create table Login(
+	Login varchar(30) primary key,
+	Password varchar(30),
+	type Char
+)
+
+insert into Login values ('Mehdi','qwerty123','M')
+
 create table RDV(
 	Num_rdv int primary key Identity,
 	Date_rdv Date,
