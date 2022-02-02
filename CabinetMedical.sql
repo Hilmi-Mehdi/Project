@@ -43,12 +43,23 @@ insert into Assurance values
 create table Ordonnonce(
 	Num_ordon int primary key Identity,
 	Date_ordon Date,
-	Nom_medc varchar(40),
+	Num_med int references Medic(Num_med),
 	Form_medc varchar(40)
 )
 
 insert into Ordonnonce values
-('1/31/2022','Claradol','3 fois par jour')
+('1/31/2022',1,'3 fois par jour')
+
+create table Medic(
+	Num_med int primary key Identity,
+	famille varchar(30),
+	Nom varchar(30),
+	Dosage varchar(30),
+	Form_medc varchar(40)
+)
+
+insert into Medic values
+('Antidouleur','Claradol','3 fois par jour','jelule')
 
 create table Consultation(
 	Num_cons int primary key Identity,
